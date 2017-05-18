@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>.SEC: основы веб-программирования</h1>
+		<h2>Шрифт в вебе</h2>
+	</header>
+
+	<section class="slide">
+		<h2>Структура шрифта</h2>
+		<img src="pictures/base-typography-knowledge.jpg" alt="">
+	</section>
+
+	<section class="slide">
+		<h2>Все размеры в шрифте — относительные!</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Семейство шрифта</h2>
+		<p class="next">Разная классификация шрифтов в обычной типографике и в вебе.</p>
+		<p class="next">Мы будем рассматривать только веб.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Семейства шрифтов в вебе</h2>
+		<ul class="next demo-fonts" style="font-size: 1.6em;">
+			<li>serif: <span style="font-family:serif">Пример текста</span></li>
+			<li class="next">sans-serif: <span style="font-family:sans-serif">Пример текста</span></li>
+			<li class="next">monospace: <span style="font-family:monospace">Пример текста</span></li>
+			<li class="next">cursive: <span style="font-family:cursive">Пример текста</span></li>
+			<li class="next">fantasy: <span style="font-family:fantasy">Пример текста</span></li>
+			<li class="next">system-ui*: <span style="font-family:system-ui">Пример текста</span></li>
+		</ul>
+		<style>
+			.demo-fonts li {
+				display: flex;
+				justify-content: space-between;				
+				text-indent: initial !important;
+			}
+			.demo-fonts li::before {
+				content: initial !important;				
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Управление шрифтом в CSS</h2>
+		<ul>
+			<li>font-family (шрифт)</li>
+			<li class="next">font-size (размер)</li>
+			<li class="next">font-style (начертание)</li>
+			<li class="next">font-weight (насыщенность)</li>
+			<li class="next">line-height (межстрочное расстояние)</li>
+			<li class="next">letter-spacing (межбуквенное расстояние)</li>
+			<li class="next">font-variant (капитель)</li>
+			<li class="next">text-transform (апперкейс)</li>
+			<li class="next">font (комплексное свойство)</li>
+			<li class="next"><a href="https://webref.ru/css/type/text" target="_blank">...</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>font-family</h2>
+		<p>
+			<code>font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;</code>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>font-size</h2>
+		<p>В чём можно задавать размер шрифта?</p>
+		<ul>
+			<li class="next" style="font-weight: bold">px</li>
+			<li class="next" style="font-weight: bold">rem</li>
+			<li class="next" style="color: gray">em</li>
+			<li class="next" style="color: gray">%</li>
+			<li class="next" style="color: gray">...</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>font-style</h2>
+		<p class="next" style="font-size: 2em; font-style: normal">normal</p>
+		<p class="next" style="font-size: 2em; font-style: italic">italic</p>
+		<p class="next" style="font-size: 2em; font-style: oblique">oblique*</p>
+	</section>
+
+	<section class="slide">
+		<h2>font-weight</h2>
+		<ul class="next"><li>100 — тонкое начертание;</li><li>200 — сверхсветлое;</li><li>300 — светлое;</li><li>400 — нормальное (аналогично <span class="value">normal</span>);</li><li>500 — среднее;</li><li>600 — полужирное;</li><li>700 — жирное (аналогично <span class="value">bold</span>);</li><li>800 — сверхжирное;</li><li>900 — тяжёлое.</li></ul>
+	</section>
+
+	<section class="slide">
+		<h2>font-weight</h2>
+		<ul>
+			<li>normal</li>
+			<li>bold</li>
+			<li>lighter</li>
+			<li>bolder</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>line-height</h2>
+		<p>В чём можно задавать размер межстрочного расстояния?</p>
+		<ul>
+			<li class="next" style="color: gray">px</li>
+			<li class="next" style="color: gray">rem</li>
+			<li class="next" style="color: gray">em</li>
+			<li class="next" style="color: gray">%</li>
+			<li class="next" style="color: gray">...</li>
+			<li class="next" style="font-weight: bold">коэффициент</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>line-height</h2>
+		<p>Как вычислить коэффициент?</p>
+	</section>
+
+	<section class="slide">
+		<h2>Чему равна высота строки на самом деле?</h2>
+		<em>Зависит от множества факторов</em>
+	</section>
+
+	<section class="slide">
+		<h2>letter-spacing</h2>
+		<p>В чём можно задавать размер межбуквенного расстояния?</p>
+		<ul>
+			<li class="next" style="color: gray">px</li>
+			<li class="next" style="color: gray">rem</li>
+			<li class="next" style="font-weight: bold">em</li>
+			<li class="next" style="color: gray">%</li>
+			<li class="next" style="color: gray">...</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>letter-spacing</h2>
+		<p>Как вычислить значение в em?</p>
+	</section>
+
+	<section class="slide">
+		<h2>font-variant</h2>
+		<p class="next" style="font-size: 2em; font-variant: normal">normal — Пример текста</p>
+		<p class="next" style="font-size: 2em; font-variant: small-caps">small-caps — Пример текста</p>
+	</section>
+
+	<section class="slide">
+		<h2>text-transform</h2>
+		<p class="next" style="font-size: 1.5em; text-transform: none">none — Пример текста</p>
+		<p class="next" style="font-size: 1.5em; text-transform: lowercase">lowercase — Пример текста</p>
+		<p class="next" style="font-size: 1.5em; text-transform: uppercase ">uppercase — Пример текста</p>
+		<p class="next" style="font-size: 1.5em; text-transform: capitalize ">capitalize — Пример текста</p>
+		<div class="next"><em>Можно использовать совместно с :first-letter</em></div>
+	</section>
+
+	<section class="slide">
+		<h2>font</h2>
+		<p><code>font: [font-style||font-variant||font-weight||font-stretch] font-size [/line-height] font-family</code></p>
+	</section>
+
+	<section class="slide">
+		<h2>Подключение шрифта</h2>
+		<p><code>@font-face{}</code></p>
+		<pre class="next" style="font-size: 0.8em;">
+<code>@font-face {</code>
+<code>  font-family: 'Geometria';</code>
+<code>  font-weight: 400;</code>
+<code>  font-style: normal;</code>
+<code>  src:</code>
+<code>    local('Geometria'),</code>
+<code>    local('Geometria Regular'),</code>
+<code>    url(/local/assets/fonts/geometria/normal.woff2) format("woff2"),</code>
+<code>    url(/local/assets/fonts/geometria/normal.woff) format("woff")</code>
+<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Подключение шрифта через интернет</h2>
+		<p class="next">Google Fonts</p>
+		<p class="next">...</p>
+	</section>
+
+	<section class="slide">
+		<h2>Опасности</h2>
+		<ul>
+			<li class="next">Если не подключили weight...</li>
+			<li class="next">Если не подключили italic...</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Управление текстом в CSS</h2>
+		<ul>
+			<li>color</li>
+			<li class="next">text-align</li>
+			<li class="next">vertical-align</li>
+			<li class="next">text-decoration</li>
+			<li class="next">text-indent</li>
+			<li class="next">text-shadow</li>
+			<li class="next"><a href="https://webref.ru/css/type/text" target="_blank">...</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Откуда расстояние под картинкой?</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Структура шрифта</h2>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+	<style>
+	.slide {
+		padding-top: 35px;
+	}
+	.caption h2 {
+		padding-bottom: .15em;
+		font: 700 0.8em/1 PT Sans Narrow, sans-serif;
+	}
+	img {
+		max-width: 100%;
+	}
+	.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.clear-list li::before {
+	content: none !important;
+}
+.clear-list li {
+text-indent: 0 !important;
+}
+	</style>
+
+	<script>
+		(function(){for(var e=document.getElementsByClassName("ciu_embed"),t=0;t<e.length;t++){var s=e[t],n=s.getAttribute("data-feature"),r=s.getAttribute("data-periods");if(n){var a="http://caniuse.bitsofco.de/embed/index.html",o='<iframe src="'+a+"?feat="+n+"&periods="+r+'" frameborder="0" width="100%" height="400px"></iframe>';s.innerHTML=o}else s.innerHTML="A feature was not included. Go to <a href='http://caniuse.bitsofco.de/#how-to-use'>http://caniuse.bitsofco.de/#how-to-use</a> to generate an embed."}var i=window.addEventListener?"addEventListener":"attachEvent";(0,window[i])("attachEvent"==i?"onmessage":"message",function(t){var s=t.data;if("string"==typeof s&&s.indexOf("ciu_embed")>-1)for(var n=s.split(":")[1],r=s.split(":")[2],a=0;a<e.length;a++){var o=e[a];if(o.getAttribute("data-feature")===n){var i=parseInt(r)+30;o.childNodes[0].height=i+"px";break}}},!1)}).call(this);
+	</script>
+</body>
+</html>
